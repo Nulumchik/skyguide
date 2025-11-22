@@ -6,95 +6,93 @@
 <title>Sky Guide — Главная</title>
 
 <style>
-    * { box-sizing: border-box; }
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6f7f9;
+    color: #033d4b;
+}
 
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #e6f7f9;
-        color: #033d4b;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #006d77, #83c5be);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-        background: linear-gradient(90deg, #006d77, #83c5be);
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    .logo {
-        font-size: 28px;
-        font-weight: bold;
-    }
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity .2s;
+}
+nav a:hover { opacity: .7; }
 
-    nav a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        transition: opacity .2s;
-    }
-    nav a:hover { opacity: .7; }
+.section {
+    padding: 60px 40px;
+    text-align: center;
+}
 
-    .section {
-        padding: 60px 40px;
-        text-align: center;
-    }
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
 
-    .section h2 {
-        font-size: 36px;
-        margin-bottom: 25px;
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
 
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 25px;
-        margin-top: 40px;
-    }
+.card {
+    padding: 28px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 18px;
+    font-weight: 500;
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
 
-    .card {
-        padding: 28px;
-        border-radius: 12px;
-        background: white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        font-size: 18px;
-        font-weight: 500;
-        transition: transform .2s, box-shadow .2s;
-    }
+.qr-block {
+    background: #d9f3f5;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 420px;
+    padding: 30px 20px;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    }
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #014f54;
+    color: white;
+    margin-top: 40px;
+}
 
-    .qr-block {
-        background: #d9f3f5;
-        border-radius: 12px;
-        margin: 40px auto;
-        max-width: 420px;
-        padding: 30px 20px;
-    }
-
-    footer {
-        text-align: center;
-        padding: 30px;
-        background: #014f54;
-        color: white;
-        margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-        header { padding: 15px 20px; }
-        .section { padding: 40px 20px; }
-        .section h2 { font-size: 28px; }
-    }
+@media (max-width: 600px) {
+    header { padding: 15px 20px; }
+    .section { padding: 40px 20px; }
+    .section h2 { font-size: 28px; }
+}
 </style>
 </head>
 
@@ -117,25 +115,74 @@
   <h2>Наши услуги</h2>
 
   <div class="grid">
-    <div class="card">Мониторинг территории (фото/видео)</div>
-    <div class="card">Обработка полей и территорий</div>
-    <div class="card">Поиск людей и имущества</div>
-    <div class="card">Индустриальная инспекция (тепловизор)</div>
-    <div class="card">Обследование зданий и труб</div>
-    <div class="card">3D-картография и моделирование</div>
-    <div class="card">Аэрофотосъёмка</div>
-    <div class="card">Коммерческая видеосъёмка</div>
+    <div class="card">Мониторинг территории (фото/видео)<br><span style="color:#006d77; font-weight:bold;">от 7 500 ₸</span></div>
+    <div class="card">Обработка полей и территорий<br><span style="color:#006d77; font-weight:bold;">от 3 000 ₸/га</span></div>
+    <div class="card">Поиск людей и имущества<br><span style="color:#006d77; font-weight:bold;">от 12 500 ₸</span></div>
+    <div class="card">Индустриальная инспекция (тепловизор)<br><span style="color:#006d77; font-weight:bold;">от 11 000 ₸</span></div>
+    <div class="card">Обследование зданий и труб<br><span style="color:#006d77; font-weight:bold;">от 9 000 ₸</span></div>
+    <div class="card">3D-картография и моделирование<br><span style="color:#006d77; font-weight:bold;">от 20 000 ₸</span></div>
+    <div class="card">Аэрофотосъёмка<br><span style="color:#006d77; font-weight:bold;">от 6 000 ₸</span></div>
+    <div class="card">Коммерческая видеосъёмка<br><span style="color:#006d77; font-weight:bold;">от 15 000 ₸</span></div>
   </div>
 </section>
 
-<section class="section qr-block">
-  <h2>QR-код для быстрого доступа</h2>
-  <p>Сканируйте, чтобы открыть Sky Guide на мобильном устройстве</p>
+<!-- Калькулятор стоимости -->
+<section class="section" style="max-width:600px; margin:auto;">
+  <h2>Калькулятор стоимости</h2>
+  <p>Рассчитайте ориентировочную цену услуги</p>
 
-  <!-- Заменить ссылку на твою -->
-  <img src="https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=https://your-site-url.com"
-       alt="QR код Sky Guide"
-       style="margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+  <div style="background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; font-size:18px;">
+    
+    <label>Выберите услугу:</label><br>
+    <select id="service" style="width:100%; padding:10px; margin:10px 0; border-radius:8px;">
+      <option value="7500">Мониторинг территории (фото/видео)</option>
+      <option value="3000">Обработка полей и территорий (₸/га)</option>
+      <option value="12500">Поиск людей и имущества</option>
+      <option value="11000">Индустриальная инспекция (тепловизор)</option>
+      <option value="9000">Обследование зданий и труб</option>
+      <option value="20000">3D-картография и моделирование</option>
+      <option value="6000">Аэрофотосъёмка</option>
+      <option value="15000">Коммерческая видеосъёмка</option>
+    </select>
+
+    <label>Регион:</label><br>
+    <select id="region" style="width:100%; padding:10px; margin:10px 0; border-radius:8px;">
+      <option value="1">Алматы</option>
+      <option value="0.95">Астана</option>
+      <option value="0.9">Шымкент</option>
+      <option value="0.85">Области</option>
+    </select>
+
+    <label>Загруженность операторов:</label><br>
+    <select id="load" style="width:100%; padding:10px; margin:10px 0; border-radius:8px;">
+      <option value="1">Низкая</option>
+      <option value="1.15">Средняя</option>
+      <option value="1.3">Высокая</option>
+    </select>
+
+    <button onclick="calcPrice()" style="width:100%; padding:12px; margin-top:20px; background:#006d77; color:white; border:none; border-radius:8px; font-weight:bold; font-size:18px;">
+      Рассчитать цену
+    </button>
+
+    <div id="result" style="margin-top:25px; font-size:22px; font-weight:bold; text-align:center; color:#006d77;"></div>
+  </div>
+</section>
+
+<script>
+function calcPrice() {
+    const base = Number(document.getElementById('service').value);
+    const region = Number(document.getElementById('region').value);
+    const load = Number(document.getElementById('load').value);
+    const price = Math.round(base * region * load);
+    document.getElementById('result').innerHTML = "Примерная стоимость: " + price.toLocaleString('ru-RU') + " ₸";
+}
+</script>
+
+<!-- Блок QR-кода (файл в корне репозитория) -->
+<section class="section qr-block">
+  <h2 style="color:#033d4b; text-align:center;">QR-код для быстрого доступа</h2>
+  <p style="color:#033d4b; text-align:center;">Откройте сайт Sky Guide на мобильном устройстве</p>
+  <img src="qr.png" alt="QR код Sky Guide" style="margin-top: 20px; display:block; margin-left:auto; margin-right:auto; width:200px; height:200px;">
 </section>
 
 <footer>
@@ -144,3 +191,5 @@
 
 </body>
 </html>
+
+
