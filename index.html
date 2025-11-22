@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sky Guide — Главная</title>
+
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #e6f7f9;
+        color: #033d4b;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: linear-gradient(90deg, #006d77, #83c5be);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        transition: opacity .2s;
+    }
+    nav a:hover { opacity: .7; }
+
+    .section {
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .section h2 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .card {
+        padding: 28px;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        font-size: 18px;
+        font-weight: 500;
+        transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .qr-block {
+        background: #d9f3f5;
+        border-radius: 12px;
+        margin: 40px auto;
+        max-width: 420px;
+        padding: 30px 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        background: #014f54;
+        color: white;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+        header { padding: 15px 20px; }
+        .section { padding: 40px 20px; }
+        .section h2 { font-size: 28px; }
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Sky Guide</div>
+  <nav>
+    <a href="operator.html">Оператор</a>
+    <a href="customer.html">Покупатель</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>О компании</h2>
+  <p>Sky Guide — платформа операторов дронов. Создайте задачу, получайте предложения от пилотов и выбирайте лучшее по цене, рейтингу и срокам.</p>
+</section>
+
+<section class="section">
+  <h2>Наши услуги</h2>
+
+  <div class="grid">
+    <div class="card">Мониторинг территории (фото/видео)</div>
+    <div class="card">Обработка полей и территорий</div>
+    <div class="card">Поиск людей и имущества</div>
+    <div class="card">Индустриальная инспекция (тепловизор)</div>
+    <div class="card">Обследование зданий и труб</div>
+    <div class="card">3D-картография и моделирование</div>
+    <div class="card">Аэрофотосъёмка</div>
+    <div class="card">Коммерческая видеосъёмка</div>
+  </div>
+</section>
+
+<section class="section qr-block">
+  <h2>QR-код для быстрого доступа</h2>
+  <p>Сканируйте, чтобы открыть Sky Guide на мобильном устройстве</p>
+
+  <!-- Заменить ссылку на твою -->
+  <img src="https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=https://your-site-url.com"
+       alt="QR код Sky Guide"
+       style="margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+</section>
+
+<footer>
+  © 2025 Sky Guide. Все права защищены.
+</footer>
+
+</body>
+</html>

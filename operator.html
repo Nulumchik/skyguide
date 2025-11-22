@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sky Guide — Оператор</title>
+<style>
+body { margin: 0; font-family: Arial, sans-serif; background: #e6f7f9; color: #033d4b; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: linear-gradient(90deg, #006d77, #83c5be); color: white; position: sticky; top:0; z-index:1000;}
+header .logo { font-size: 28px; font-weight: bold; }
+nav a { margin-left: 15px; text-decoration: none; color: white; font-size: 16px; }
+.section { padding: 60px 40px; text-align: center; }
+.section h2 { font-size: 36px; margin-bottom: 25px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 40px; }
+.card { padding: 28px; border-radius: 12px; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.06); font-size: 18px; font-weight: 500; }
+form { max-width: 500px; margin: auto; text-align: left; }
+form label { display: block; margin: 12px 0 5px; font-weight: bold; }
+form input, form select { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; }
+form button { margin-top: 15px; padding: 10px 20px; border-radius: 6px; border: none; background: #014f54; color: white; cursor: pointer; }
+footer { text-align: center; padding: 30px; background: #014f54; color: white; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Sky Guide — Оператор</div>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="customer.html">Покупатель</a>
+  </nav>
+</header>
+
+<section class="section">
+  <h2>Добро пожаловать, оператор!</h2>
+  <p>Здесь вы можете зарегистрироваться, получать заявки и управлять своим профилем.</p>
+
+  <div class="grid">
+    <div class="card">Регистрация оператора</div>
+    <div class="card">Список ваших заказов</div>
+    <div class="card">Управление ценами и расписанием</div>
+    <div class="card">Статистика и рейтинги</div>
+  </div>
+
+  <form>
+    <label>Имя:</label>
+    <input type="text" placeholder="Введите имя" required>
+    <label>Email:</label>
+    <input type="email" placeholder="Введите email" required>
+    <label>Пароль:</label>
+    <input type="password" placeholder="Введите пароль" required>
+    <button type="submit">Зарегистрироваться</button>
+  </form>
+</section>
+
+<section class="section" style="background: #ccefee; border-radius:12px; margin:40px auto; max-width:400px; padding:20px;">
+  <h2 style="color:#014f54;">QR-код для оператора</h2>
+  <p style="color:#014f54;">Сканируйте код, чтобы открыть Sky Guide на мобильном</p>
+  <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=https://your-site-url.com/operator.html" 
+       alt="QR код оператора" style="margin-top: 20px; display:block; margin-left:auto; margin-right:auto;">
+</section>
+
+<footer>
+  © 2025 Sky Guide — Оператор. Все права защищены.
+</footer>
+
+</body>
+</html>
+
