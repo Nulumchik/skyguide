@@ -66,10 +66,18 @@ nav a:hover { opacity: .7; }
     font-size: 18px;
     font-weight: 500;
     transition: transform .2s, box-shadow .2s;
+    text-align: center;
 }
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    opacity: 0.9;
 }
 
 .qr-block {
@@ -115,18 +123,59 @@ footer {
   <h2>Наши услуги</h2>
 
   <div class="grid">
-    <div class="card">Мониторинг территории (фото/видео)<br><span style="color:#006d77; font-weight:bold;">от 7 500 ₸</span></div>
-    <div class="card">Обработка полей и территорий<br><span style="color:#006d77; font-weight:bold;">от 3 000 ₸/га</span></div>
-    <div class="card">Поиск людей и имущества<br><span style="color:#006d77; font-weight:bold;">от 12 500 ₸</span></div>
-    <div class="card">Индустриальная инспекция (тепловизор)<br><span style="color:#006d77; font-weight:bold;">от 11 000 ₸</span></div>
-    <div class="card">Обследование зданий и труб<br><span style="color:#006d77; font-weight:bold;">от 9 000 ₸</span></div>
-    <div class="card">3D-картография и моделирование<br><span style="color:#006d77; font-weight:bold;">от 20 000 ₸</span></div>
-    <div class="card">Аэрофотосъёмка<br><span style="color:#006d77; font-weight:bold;">от 6 000 ₸</span></div>
-    <div class="card">Коммерческая видеосъёмка<br><span style="color:#006d77; font-weight:bold;">от 15 000 ₸</span></div>
+
+    <div class="card">
+      <img src="img/drone_3.png">
+      Мониторинг территории (фото/видео)<br>
+      <span style="color:#006d77; font-weight:bold;">от 7 500 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_7.png">
+      Обработка полей и территорий<br>
+      <span style="color:#006d77; font-weight:bold;">от 3 000 ₸/га</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_5.png">
+      Поиск людей и имущества<br>
+      <span style="color:#006d77; font-weight:bold;">от 12 500 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_9.png">
+      Индустриальная инспекция (тепловизор)<br>
+      <span style="color:#006d77; font-weight:bold;">от 11 000 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_10.png">
+      Обследование зданий и труб<br>
+      <span style="color:#006d77; font-weight:bold;">от 9 000 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_12.png">
+      3D-картография и моделирование<br>
+      <span style="color:#006d77; font-weight:bold;">от 20 000 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_2.png">
+      Аэрофотосъёмка<br>
+      <span style="color:#006d77; font-weight:bold;">от 6 000 ₸</span>
+    </div>
+
+    <div class="card">
+      <img src="img/drone_4.png">
+      Коммерческая видеосъёмка<br>
+      <span style="color:#006d77; font-weight:bold;">от 15 000 ₸</span>
+    </div>
+
   </div>
 </section>
 
-<!-- Калькулятор стоимости -->
+<!-- Калькулятор -->
 <section class="section" style="max-width:600px; margin:auto;">
   <h2>Калькулятор стоимости</h2>
   <p>Рассчитайте ориентировочную цену услуги</p>
@@ -138,9 +187,9 @@ footer {
       <option value="7500">Мониторинг территории (фото/видео)</option>
       <option value="3000">Обработка полей и территорий (₸/га)</option>
       <option value="12500">Поиск людей и имущества</option>
-      <option value="11000">Индустриальная инспекция (тепловизор)</option>
+      <option value="11000">Индустриальная инспекция</option>
       <option value="9000">Обследование зданий и труб</option>
-      <option value="20000">3D-картография и моделирование</option>
+      <option value="20000">3D-картография</option>
       <option value="6000">Аэрофотосъёмка</option>
       <option value="15000">Коммерческая видеосъёмка</option>
     </select>
@@ -178,11 +227,10 @@ function calcPrice() {
 }
 </script>
 
-<!-- Блок QR-кода (файл в корне репозитория) -->
 <section class="section qr-block">
   <h2 style="color:#033d4b; text-align:center;">QR-код для быстрого доступа</h2>
   <p style="color:#033d4b; text-align:center;">Откройте сайт Sky Guide на мобильном устройстве</p>
-  <img src="qr.png" alt="QR код Sky Guide" style="margin-top: 20px; display:block; margin-left:auto; margin-right:auto; width:200px; height:200px;">
+  <img src="qr.png" style="margin-top:20px; width:200px; height:200px; display:block; margin-left:auto; margin-right:auto;">
 </section>
 
 <footer>
@@ -191,5 +239,3 @@ function calcPrice() {
 
 </body>
 </html>
-
-
