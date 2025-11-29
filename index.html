@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sky Guide — Главная</title>
-
 <style>
 * { box-sizing: border-box; }
 body {
@@ -14,6 +13,7 @@ body {
     color: #033d4b;
 }
 
+/* ---------- HEADER ---------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,60 +26,70 @@ header {
     z-index: 1000;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-}
-
+.logo { font-size: 28px; font-weight: bold; }
 nav a {
-    margin-left: 20px;
+    margin-left: 32px;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
     transition: opacity .2s;
 }
 nav a:hover { opacity: .7; }
 
-.section {
-    padding: 60px 40px;
+/* ---------- HERO ---------- */
+.hero {
+    width: 100%;
+    height: 420px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1524778153300-4c80b64c322e?auto=format&fit=crop&w=1600&q=80") 
+        center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
     text-align: center;
 }
 
-.section h2 {
-    font-size: 36px;
-    margin-bottom: 25px;
-}
+.hero h1 { font-size: 52px; margin: 0 0 12px 0; font-weight: 800; }
+.hero p { font-size: 22px; margin: 0; opacity: 0.9; }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
-}
+/* ---------- SECTIONS ---------- */
+.section { padding: 60px 40px; text-align: center; }
+.section p { max-width: 800px; margin: 0 auto; line-height: 1.6; }
+.section h2 { font-size: 36px; margin-bottom: 25px; }
 
+/* ---------- GRID ---------- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 40px; }
+
+/* ---------- SERVICE CARDS ---------- */
 .card {
     padding: 28px;
-    border-radius: 12px;
-    background: white;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #e4f1f2;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    font-size: 18px;
-    font-weight: 500;
     transition: transform .2s, box-shadow .2s;
     text-align: center;
 }
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-}
+.card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.card img { width: 100%; height: 150px; border-radius: 10px; object-fit: cover; margin-bottom: 12px; }
+.card-title { font-size: 18px; font-weight: 600; margin-bottom: 12px; }
+.card-price { font-size: 22px; font-weight: 700; color: #009fb3; margin-top: 10px; }
 
-.card img {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 12px;
-    opacity: 0.9;
+/* ---------- CALCULATOR ---------- */
+.calc-box {
+    background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; font-size:18px;
 }
+button {
+    width:100%; padding:12px; margin-top:20px; background:#009fb3; color:white; border:none; border-radius:8px;
+    font-weight:bold; font-size:18px; cursor:pointer; transition: .2s;
+}
+button:hover { background:#00879b; transform: translateY(-2px); }
 
+/* ---------- QR BLOCK ---------- */
 .qr-block {
     background: #d9f3f5;
     border-radius: 12px;
@@ -88,22 +98,19 @@ nav a:hover { opacity: .7; }
     padding: 30px 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #014f54;
-    color: white;
-    margin-top: 40px;
-}
+/* ---------- FOOTER ---------- */
+footer { text-align: center; padding: 30px; background: #014f54; color: white; margin-top: 40px; }
 
+/* ---------- MOBILE ---------- */
 @media (max-width: 600px) {
     header { padding: 15px 20px; }
     .section { padding: 40px 20px; }
     .section h2 { font-size: 28px; }
+    .hero h1 { font-size: 38px; }
+    .hero p { font-size: 18px; }
 }
 </style>
 </head>
-
 <body>
 
 <header>
@@ -114,6 +121,13 @@ footer {
   </nav>
 </header>
 
+<section class="hero">
+    <div>
+        <h1>Sky Guide</h1>
+        <p>Платформа операторов дронов — быстро, удобно и доступно</p>
+    </div>
+</section>
+
 <section class="section">
   <h2>О компании</h2>
   <p>Sky Guide — платформа операторов дронов. Создайте задачу, получайте предложения от пилотов и выбирайте лучшее по цене, рейтингу и срокам.</p>
@@ -121,75 +135,63 @@ footer {
 
 <section class="section">
   <h2>Наши услуги</h2>
-
   <div class="grid">
-
     <div class="card">
-      <img src="img/drone_3.png">
-      Мониторинг территории (фото/видео)<br>
-      <span style="color:#006d77; font-weight:bold;">от 7 500 ₸</span>
+      <img src="https://plus.unsplash.com/premium_photo-1661899405263-a0bee333068e?auto=format&fit=crop&w=1200&q=80" alt="Мониторинг территории">
+      <div class="card-title">Мониторинг территории (фото/видео)</div>
+      <div class="card-price">от 7 500 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_7.png">
-      Обработка полей и территорий<br>
-      <span style="color:#006d77; font-weight:bold;">от 3 000 ₸/га</span>
+      <img src="https://blog.fenstermaker.com/wp-content/uploads/2022/11/Agriculture-Drone-1196x628.jpg" alt="Обработка полей">
+      <div class="card-title">Обработка полей и территорий</div>
+      <div class="card-price">от 3 000 ₸/га</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_5.png">
-      Поиск людей и имущества<br>
-      <span style="color:#006d77; font-weight:bold;">от 12 500 ₸</span>
+      <img src="https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2019/10/f79fd4fb894f799075b7a88676cdfeac.jpg" alt="Поиск людей">
+      <div class="card-title">Поиск людей и имущества</div>
+      <div class="card-price">от 12 500 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_9.png">
-      Индустриальная инспекция (тепловизор)<br>
-      <span style="color:#006d77; font-weight:bold;">от 11 000 ₸</span>
+      <img src="https://cdn.prod.website-files.com/634db544173ac11907b1da8b/641416339c36801ab40ded1f_Pampa-Cover.jpg" alt="Инспекция">
+      <div class="card-title">Индустриальная инспекция (тепловизор)</div>
+      <div class="card-price">от 11 000 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_10.png">
-      Обследование зданий и труб<br>
-      <span style="color:#006d77; font-weight:bold;">от 9 000 ₸</span>
+      <img src="https://cdn.prod.website-files.com/634db544173ac11907b1da8b/641416339c36801ab40ded1f_Pampa-Cover.jpg" alt="Обследование зданий">
+      <div class="card-title">Обследование зданий и труб</div>
+      <div class="card-price">от 9 000 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_12.png">
-      3D-картография и моделирование<br>
-      <span style="color:#006d77; font-weight:bold;">от 20 000 ₸</span>
+      <img src="https://images.ctfassets.net/et769tc4wc1v/22UMZirG1Q44eqwhal6vG5/20ac06a242b47bc5fd182bc185a45965/Drones_for_forestry_4.png" alt="3D-картография">
+      <div class="card-title">3D-картография и моделирование</div>
+      <div class="card-price">от 20 000 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_2.png">
-      Аэрофотосъёмка<br>
-      <span style="color:#006d77; font-weight:bold;">от 6 000 ₸</span>
+      <img src="https://images.unsplash.com/photo-1524778153300-4c80b64c322e?auto=format&fit=crop&w=1200&q=80" alt="Аэрофотосъёмка">
+      <div class="card-title">Аэрофотосъёмка</div>
+      <div class="card-price">от 6 000 ₸</div>
     </div>
-
     <div class="card">
-      <img src="img/drone_4.png">
-      Коммерческая видеосъёмка<br>
-      <span style="color:#006d77; font-weight:bold;">от 15 000 ₸</span>
+      <img src="https://drone.solutions.co.uk/wp-content/uploads/sites/7/2023/09/pexels-photo-4374758-1024x683.jpeg" alt="Коммерческая видеосъёмка">
+      <div class="card-title">Коммерческая видеосъёмка</div>
+      <div class="card-price">от 15 000 ₸</div>
     </div>
-
   </div>
 </section>
 
-<!-- Калькулятор -->
 <section class="section" style="max-width:600px; margin:auto;">
   <h2>Калькулятор стоимости</h2>
   <p>Рассчитайте ориентировочную цену услуги</p>
 
-  <div style="background:white; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:left; font-size:18px;">
-    
+  <div class="calc-box">
     <label>Выберите услугу:</label><br>
     <select id="service" style="width:100%; padding:10px; margin:10px 0; border-radius:8px;">
       <option value="7500">Мониторинг территории (фото/видео)</option>
       <option value="3000">Обработка полей и территорий (₸/га)</option>
       <option value="12500">Поиск людей и имущества</option>
-      <option value="11000">Индустриальная инспекция</option>
+      <option value="11000">Индустриальная инспекция (тепловизор)</option>
       <option value="9000">Обследование зданий и труб</option>
-      <option value="20000">3D-картография</option>
+      <option value="20000">3D-картография и моделирование</option>
       <option value="6000">Аэрофотосъёмка</option>
       <option value="15000">Коммерческая видеосъёмка</option>
     </select>
@@ -209,10 +211,7 @@ footer {
       <option value="1.3">Высокая</option>
     </select>
 
-    <button onclick="calcPrice()" style="width:100%; padding:12px; margin-top:20px; background:#006d77; color:white; border:none; border-radius:8px; font-weight:bold; font-size:18px;">
-      Рассчитать цену
-    </button>
-
+    <button onclick="calcPrice()">Рассчитать цену</button>
     <div id="result" style="margin-top:25px; font-size:22px; font-weight:bold; text-align:center; color:#006d77;"></div>
   </div>
 </section>
@@ -223,14 +222,15 @@ function calcPrice() {
     const region = Number(document.getElementById('region').value);
     const load = Number(document.getElementById('load').value);
     const price = Math.round(base * region * load);
-    document.getElementById('result').innerHTML = "Примерная стоимость: " + price.toLocaleString('ru-RU') + " ₸";
+    document.getElementById('result').innerHTML = 
+        "Примерная стоимость: " + price.toLocaleString('ru-RU') + " ₸";
 }
 </script>
 
 <section class="section qr-block">
   <h2 style="color:#033d4b; text-align:center;">QR-код для быстрого доступа</h2>
   <p style="color:#033d4b; text-align:center;">Откройте сайт Sky Guide на мобильном устройстве</p>
-  <img src="qr.png" style="margin-top:20px; width:200px; height:200px; display:block; margin-left:auto; margin-right:auto;">
+  <img src="qr.png" alt="QR код Sky Guide" style="margin-top: 20px; display:block; margin-left:auto; margin-right:auto; width:200px; height:200px;">
 </section>
 
 <footer>
